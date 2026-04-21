@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loan Prediction</title>
+</head>
+<body>
+
+<h2>Loan Eligibility Checker</h2>
+
+<form action="/predict" method="post">
+
+    Age: <input type="number" name="Age" required><br><br>
+    Income: <input type="number" name="Income" required><br><br>
+    Loan Amount: <input type="number" name="Loan_Amount" required><br><br>
+    Credit Score: <input type="number" name="Credit_Score" required><br><br>
+    Employment Years: <input type="number" name="Employment_Years" required><br><br>
+
+    Education Level:
+    <select name="Education_Level">
+        <option value="0">High School</option>
+        <option value="1">Bachelors</option>
+        <option value="2">Masters</option>
+        <option value="3">PhD</option>
+    </select><br><br>
+
+    Housing Status:
+    <select name="Housing_Status">
+        <option value="0">Rent</option>
+        <option value="1">Mortgage</option>
+        <option value="2">Own</option>
+    </select><br><br>
+
+    <input type="submit" value="Check Eligibility">
+
+</form>
+
+<h3>{{ prediction_text }}</h3>
+
+</body>
+</html>
